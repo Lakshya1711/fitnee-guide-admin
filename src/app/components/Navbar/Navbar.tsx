@@ -7,6 +7,32 @@ import logo from './logo.png'
 
 const Navbar = () => {
     const [isAdminAuthenticated, setIsAdminAuthicated] = useState(false);
+
+    const checkAdminAuthenticated = async () => {
+        try {
+            const response = await fetch(process.env.NEXT_PUBLIC_BACKEND_API + '/admin/checklogin', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                credentials: 'include'
+            })
+            if (response.ok) {
+                setIsAdminAuthicated(true)
+            }
+            else {
+                setIsAdminAuthicated(false)
+            }
+
+        } catch (error) {
+            console.error(error)
+            setIsAdminAuthicated(false)
+        }
+    }
+
+    useEffect(() => {
+        checkAdminAuthenticated();
+    }, [])
     return (
         <div className='navbar'>
             <Image src={logo} alt="Logo" width={100} className='logo' />
