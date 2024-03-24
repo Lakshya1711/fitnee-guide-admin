@@ -1,0 +1,47 @@
+body {
+  background-color: #f0f0f0; /* Change this color to your desired background color */
+}
+
+.formpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.formpage input[type="text"],
+.formpage input[type="email"],
+.formpage input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formpage button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formpage button:hover {
+  background-color: #0056b3;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+  .formpage input[type="email"],
+  .formpage input[type="password"],
+  .formpage button {
+    width: 80%;
+  }
+}

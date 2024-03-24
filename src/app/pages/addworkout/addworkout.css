@@ -1,0 +1,63 @@
+.formpage {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  text-align: center; /* Added */
+}
+
+.formpage input[type="text"],
+.formpage textarea,
+.formpage input[type="number"],
+.formpage input[type="file"],
+.formpage button {
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formpage textarea {
+  resize: vertical; /* Allows vertical resizing */
+}
+
+.formpage button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formpage button:hover {
+  background-color: #0056b3;
+}
+
+.exercises {
+  margin-top: 20px;
+}
+
+.exercises h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.exercises p {
+  margin: 5px 0;
+}
+
+.exercises img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+}
